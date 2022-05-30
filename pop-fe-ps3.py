@@ -170,10 +170,10 @@ class PopFePs3App:
                     subprocess.call(['python3', './binmerge', '-o', 'pop-fe-ps3-work', cue_file, mb])
                 else:
                     subprocess.call(['binmerge.exe', '-o', 'pop-fe-ps3-work', cue_file, mb])
-                    cue_file = 'pop-fe-ps3-work/' + mb + '.cue'
-                    temp_files.append(cue_file)
-                    img_file = 'pop-fe-ps3-work/' + mb + '.bin'
-                    temp_files.append(img_file)
+                cue_file = 'pop-fe-ps3-work/' + mb + '.cue'
+                temp_files.append(cue_file)
+                img_file = 'pop-fe-ps3-work/' + mb + '.bin'
+                temp_files.append(img_file)
             
         print('Generating cu2') if verbose else None
         cu2_file = cue_file[:-4] + '.cu2'
